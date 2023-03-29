@@ -37,7 +37,17 @@ class Guitarist(Musician):
         return f'Guitarist instance. Name = {self.name}'
 
 class Bassist(Musician):
-    pass
+    def __init__(self, name):
+        super().__init__(name, 'Bassist', 'bass')
+
+    def __repr__(self):
+        # return a string with how to reproduce the object
+        return f'Bassist instance. Name = {self.name}'
 
 class Drummer(Musician):
-    pass
+    def __init__(self, name):
+        super().__init__(name, 'Drummer', 'drums')
+
+    def __repr__(self):
+        # return a string with how to reproduce the object
+        return f'Drummer instance. Name = {self.name}'

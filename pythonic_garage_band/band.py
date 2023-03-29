@@ -32,6 +32,10 @@ class Guitarist(Musician):
     def __init__(self, name):
         super().__init__(name, 'Guitarist', 'guitar')
 
+    def __repr__(self):
+        # return a string with how to reproduce the object
+        return f'Guitarist instance. Name = {self.name}'
+
 class Bassist(Musician):
     pass
 

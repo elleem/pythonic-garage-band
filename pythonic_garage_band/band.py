@@ -36,14 +36,13 @@ class  Musician(ABC):
         return f"{self.instrument}"
     @abstractmethod
     def some_method_that_must_be_implemented_in_base_class(self):
-        return f""
+        pass
 
     def play_solo(self):
         return self.solo
 class Guitarist(Musician):
     def __init__(self, name):
         super().__init__(name, 'Guitarist', 'guitar', 'face melting guitar solo')
-        self.some_method_that_must_be_implemented_in_base_class()
 
     def __repr__(self):
         # return a string with how to reproduce the object
@@ -53,7 +52,6 @@ class Guitarist(Musician):
 class Bassist(Musician):
     def __init__(self, name):
         super().__init__(name, 'Bassist', 'bass', 'bom bom buh bom')
-        self.some_method_that_must_be_implemented_in_base_class()
 
     def __repr__(self):
         # return a string with how to reproduce the object
@@ -63,7 +61,6 @@ class Bassist(Musician):
 class Drummer(Musician):
     def __init__(self, name):
         super().__init__(name, 'Drummer', 'drums', 'rattle boom crash')
-        self.some_method_that_must_be_implemented_in_base_class()
 
     def __repr__(self):
         # return a string with how to reproduce the object

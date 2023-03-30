@@ -4,22 +4,27 @@
 
 Author: Lauren 
 
+Version: 1.0
+
 Links and Resources
 
-back-end server url (when applicable)
-front-end application (when applicable)
-Setup
-.env requirements (where applicable)
-i.e.
+Special thanks to Raven, Jerry, and Adam for going over and explaining the final test for incomplete Keyboardist class. 
 
-PORT - Port Number
-DATABASE_URL - URL to the running Postgres instance/db
-How to initialize/run your application (where applicable)
-e.g. python main.py
-How to use your library (where applicable)
-Tests
-How do you run tests?
-Any tests of note?
-Describe any tests that you did not complete, skipped, etc
+#### Overview
+Welcome to Object Oriented Programming.
 
-credit to Raven and Jerry and Adam for helping us understand the final test for incomplete Keyboardist. 
+Model a band. 
+Use a Musician base test. 
+Start with Guitarist, Bassist, and Drummer. 
+
+
+#### To initialize
+Type into your terminal:
+
+~python3.11 -m venv .venv
+
+~source .venv/bin/activate
+
+~pip install pytest
+
+~pytest

@@ -1,4 +1,4 @@
-
+from abc import ABC, abstractmethod
 class Band:
     instances = []
     def __init__(self,name,members):
@@ -18,7 +18,7 @@ class Band:
     @classmethod
     def to_list(cls):
         return cls.instances
-class  Musician:
+class  Musician(ABC):
     def __init__(self, name, type, instrument, solo):
         self.name = name
         self.type = type
@@ -34,29 +34,48 @@ class  Musician:
 
     def get_instrument(self):
         return f"{self.instrument}"
+    @abstractmethod
+    def some_method_that_must_be_implemented_in_base_class(self):
+        return f""
 
     def play_solo(self):
         return self.solo
 class Guitarist(Musician):
     def __init__(self, name):
         super().__init__(name, 'Guitarist', 'guitar', 'face melting guitar solo')
+        self.some_method_that_must_be_implemented_in_base_class()
 
     def __repr__(self):
         # return a string with how to reproduce the object
         return f'Guitarist instance. Name = {self.name}'
-
+    def some_method_that_must_be_implemented_in_base_class(self):
+        return f""
 class Bassist(Musician):
     def __init__(self, name):
         super().__init__(name, 'Bassist', 'bass', 'bom bom buh bom')
+        self.some_method_that_must_be_implemented_in_base_class()
 
     def __repr__(self):
         # return a string with how to reproduce the object
         return f'Bassist instance. Name = {self.name}'
-
+    def some_method_that_must_be_implemented_in_base_class(self):
+            return f""
 class Drummer(Musician):
     def __init__(self, name):
         super().__init__(name, 'Drummer', 'drums', 'rattle boom crash')
+        self.some_method_that_must_be_implemented_in_base_class()
 
     def __repr__(self):
         # return a string with how to reproduce the object
         return f'Drummer instance. Name = {self.name}'
+
+    def some_method_that_must_be_implemented_in_base_class(self):
+        return f""
+class Keyboardist(Musician):
+
+    def __init__(self, name):
+        super().__init__(name, 'Guitarist', 'guitar', 'face melting guitar solo')
+
+
+
+

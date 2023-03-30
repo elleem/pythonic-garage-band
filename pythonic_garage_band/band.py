@@ -22,8 +22,7 @@ class  Musician:
     #def __repr__(self):
 
     def get_instrument(self):
-        #needs to return a string
-        pass
+        return f"{self.instrument}"
 
     def play_solo(self):
         #needs to return a string

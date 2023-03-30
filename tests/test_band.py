@@ -130,23 +130,23 @@ def test_play_solos_for_whole_band(one_band):
     assert solos[2] == "rattle boom crash"
 
 
-# STRETCH TEST
-# @pytest.mark.skip("todo")
-# def test_class_tracks_instances():
-#     assert Band.to_list() == []
-#     the_nobodies = Band("The Nobodies", [])
-#     assert len(Band.instances) == 1
-#     assert Band.instances[0] == the_nobodies
 
 
-# STRETCH TEST
-# @pytest.mark.skip("todo")
-# def test_to_list():
-#     assert Band.to_list() == []
-#     the_nobodies = Band("The Nobodies", [])
-#     all_bands = Band.to_list()
-#     assert len(all_bands) == 1
-#     assert all_bands[0] == the_nobodies
+def test_class_tracks_instances():
+    assert Band.to_list() == []
+    the_nobodies = Band("The Nobodies", [])
+    assert len(Band.instances) == 1
+    assert Band.instances[0] == the_nobodies
+
+
+
+
+def test_to_list():
+    assert Band.to_list() == []
+    the_nobodies = Band("The Nobodies", [])
+    all_bands = Band.to_list()
+    assert len(all_bands) == 1
+    assert all_bands[0] == the_nobodies
 
 
 #######################

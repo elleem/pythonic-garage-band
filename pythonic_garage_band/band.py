@@ -4,17 +4,19 @@ class Band:
     def __init__(self,name,members):
         self.name = name
         self.members = members
+        Band.instances.append(self)
 
     #def __str__(self):
     #def __repr__(self):
 
     def play_solos(self):
-        pass
+        return [member.play_solo() for member in self.members]
 class  Musician:
-    def __init__(self, name, type, instrument):
+    def __init__(self, name, type, instrument, solo):
         self.name = name
         self.type = type
         self.instrument = instrument
+        self.solo = solo
 
     def __str__(self):
         return f"My name is {self.name} and I play {self.instrument}"
@@ -25,11 +27,10 @@ class  Musician:
         return f"{self.instrument}"
 
     def play_solo(self):
-        #needs to return a string
-        pass
+        return self.solo
 class Guitarist(Musician):
     def __init__(self, name):
-        super().__init__(name, 'Guitarist', 'guitar')
+        super().__init__(name, 'Guitarist', 'guitar', 'face melting guitar solo')
 
     def __repr__(self):
         # return a string with how to reproduce the object
@@ -37,7 +38,7 @@ class Guitarist(Musician):
 
 class Bassist(Musician):
     def __init__(self, name):
-        super().__init__(name, 'Bassist', 'bass')
+        super().__init__(name, 'Bassist', 'bass', 'bom bom buh bom')
 
     def __repr__(self):
         # return a string with how to reproduce the object
@@ -45,7 +46,7 @@ class Bassist(Musician):
 
 class Drummer(Musician):
     def __init__(self, name):
-        super().__init__(name, 'Drummer', 'drums')
+        super().__init__(name, 'Drummer', 'drums', 'rattle boom crash')
 
     def __repr__(self):
         # return a string with how to reproduce the object
